@@ -1,0 +1,219 @@
+namespace = peru_bolivia_confederation
+
+peru_bolivia_confederation.1 = { #Fin de la Revuelta
+	type = country_event
+	placement = ROOT
+	title = peru_bolivia_confederation.1.t
+	desc = peru_bolivia_confederation.1.d
+	flavor =  peru_bolivia_confederation.1.f
+
+	duration = 0
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+		c:PEU = {
+			is_at_war = no
+		}
+		c:PEU = ROOT	
+		NOT = { has_global_variable = coup_ended  }
+	}
+	
+	immediate = {
+		set_global_variable = { name = coup_ended }
+	}
+
+	option = { # situacion del sur - queda en manos de bolivia
+		name = peru_bolivia_confederation.1.a
+		c:BOL = {
+			trigger_event = {
+				id = peru_bolivia_confederation.2
+				days = 30
+			}
+		}
+	}
+}
+
+peru_bolivia_confederation.2 = { #El destino del Perú
+	type = country_event
+	placement = ROOT
+	title = peru_bolivia_confederation.2.t
+	desc = peru_bolivia_confederation.2.d
+	flavor =  peru_bolivia_confederation.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+		#triggered by JE
+	}
+
+	immediate = {
+		set_variable = {
+			name = peru_bolivia_var
+			value = 0
+		}
+		add_journal_entry = {
+			type = je_peru_bolivia_li
+		}
+		trigger_event = {
+			id = peru_bolivia_confederation.4
+			months = 7
+		}
+	}
+
+	option = { #peru dividido
+		name = peru_bolivia_confederation.2.a
+		default_option = yes
+		create_country = {
+            tag = ESP
+			origin = c:PEU
+			state = s:STATE_AREQUIPA.region_state:PEU
+		}
+		c:ESP = {
+			every_neighbouring_state = {
+		 		limit = {
+		 			owner = c:PEU
+		 		}
+		 		set_state_owner = c:ESP
+			}
+			set_relations = { country = c:BOL value = 60 }
+        }
+        create_diplomatic_pact = {
+            country = c:ESP
+            type = puppet
+        }
+		change_relations = {
+			country = c:PEU
+			value = -30
+		}
+		change_relations = {
+			country = c:ESP
+			value = 20
+		}
+		add_journal_entry = {
+			type = je_dictatorship_powers
+		}
+		trigger_event = {
+			id = peru_bolivia_confederation.3
+			days = 6
+		}
+	}
+
+	option = { # Peru Unido
+		name = peru_bolivia_confederation.2.b
+		change_relations = {
+			country = c:PEU
+			value = -15
+		}
+		add_journal_entry = {
+			type = je_dictatorship_powers
+		}
+	}
+}
+
+peru_bolivia_confederation.3 = { #Viva Peru del Sur
+	type = country_event
+	placement = ROOT
+	title = peru_bolivia_confederation.3.t
+	desc = peru_bolivia_confederation.3.d
+	flavor =  peru_bolivia_confederation.3.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+		#triggered by chain
+	}
+
+	option = { #viva la independecia!
+		name = peru_bolivia_confederation.3.a
+		c:ESP = {
+			add_loyalists = {
+				value = 0.2
+			}
+		}	
+	}
+}
+
+peru_bolivia_confederation.4 = { #Formalizacion - infamia
+	type = country_event
+	placement = ROOT
+	title = peru_bolivia_confederation.4.t
+	desc = peru_bolivia_confederation.4.d
+	flavor =  peru_bolivia_confederation.4.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+
+	}
+
+	option = {
+		name = peru_bolivia_confederation.4.a
+		create_incident = {
+			value = 50
+			country = c:PEU
+		}
+	}
+}
+
+peru_bolivia_confederation.5 = { #victoria de liberales
+	type = country_event
+	placement = ROOT
+	title = peru_bolivia_confederation.2.t
+	desc = peru_bolivia_confederation.2.d
+	flavor =  peru_bolivia_confederation.2.f
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+
+	}
+
+	option = { #sufragio universal
+		name = peru_bolivia_confederation.2.a
+		activate_law = law_type:law_universal_suffrage
+	}
+}

@@ -1,0 +1,127 @@
+﻿je_peru_bolivia_li = { #Formalizacion de la Confederacion
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	on_monthly_pulse = {
+		effect = {
+			change_variable = {
+				name = peru_bolivia_var
+				add = 1
+			}
+		}
+	}
+
+	complete = {
+		scope:journal_entry = { is_goal_complete = yes }
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = south_america.1
+		}
+	}
+
+	fail = {
+		AND = {
+			OR = {
+				NOT = { exists = c:ESP }
+				c:ESP = {
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+			OR = {
+				NOT = { exists = c:PEU }
+				c:PEU = {
+					NOT = { is_subject_of = ROOT }
+				}
+			}
+		}
+	}
+
+	current_value = {
+		value = root.var:peru_bolivia_var
+	}
+
+	goal_add_value = {
+		value = 120
+	}
+
+	progressbar = yes
+
+	weight = 10000
+
+	should_be_pinned_by_default = yes
+}
+
+je_dictatorship_powers = { #Poderes dictatoriales durante 10 años
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+    immediate = {
+        set_variable = {
+            name = dictator_powers
+            value = 0
+        }
+    }
+
+    on_yearly_pulse = {
+        effect = {
+            if = {
+                limit = {
+                    NOT ={
+                        has_law = law_type:law_census_voting
+                        has_law = law_type:universal_suffrage
+                    }
+                }
+                change_variable = { 
+                    name = dictator_powers
+                    add = 1
+                }
+            }
+        }
+    }
+
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+        every_interest_group = {
+            limit = {
+                NOT = { 
+                    is_interest_group_type = ig_intelligentsia 
+                    clout =< 0.05
+                }   
+            } 
+            ig_approval >= 5   
+        }
+		remove_variable = dictator_powers
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = peru_bolivia_confederation.2 #voto universal
+		}
+        remove_variable = dictator_powers
+	}
+
+    current_value = {
+		value = root.var:dictator_powers
+	}
+
+	goal_add_value = {
+		add = 10
+	}
+
+
+    timeout = 3651
+
+    on_timeout = {
+        trigger_event = {
+			id = peru_bolivia_confederation.3 #voto census
+		}
+    }
+
+	progressbar = yes
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

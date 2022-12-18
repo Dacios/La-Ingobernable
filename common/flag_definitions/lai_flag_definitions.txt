@@ -1,0 +1,59 @@
+﻿PEU = { # Peru
+	flag_definition = {
+		coa = PEU
+		subject_canton = PEU
+		allow_overlord_canton = no	
+		coa_with_overlord_canton = PEU_subject			
+		priority = 1
+	}
+	flag_definition = {
+		coa = PEU_monarchy
+		subject_canton = PEU_monarchy
+		allow_overlord_canton = no	
+		coa_with_overlord_canton = PEU_subject			
+		priority = 5
+		trigger = { 
+			coa_def_monarchy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = PEU_absolute_monarchy
+		subject_canton = PEU_absolute_monarchy
+		priority = 20
+		trigger = { 
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = PEU_republic
+		subject_canton = PEU_republic
+		priority = 10
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = PEU_communist
+		priority = 1500
+		trigger = { 
+			coa_def_communist_flag_trigger = yes
+		}
+	}		
+	flag_definition = {
+		coa = PEU
+		subject_canton = PEU
+		allow_overlord_canton = no	
+		coa_with_overlord_canton = PEU_subject			
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}	
+	flag_definition = {
+		coa = PEU_subject_SPA
+		priority = 50
+		trigger = { 
+			coa_def_spanish_ensign_trigger = yes
+		}
+	}	
+}

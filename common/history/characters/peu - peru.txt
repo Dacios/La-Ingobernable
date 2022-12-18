@@ -1,0 +1,30 @@
+CHARACTERS = {
+	c:PEU = {
+		create_character = {
+			# Luis Jose de Orbegoso
+			#role = politician # Remove this line
+			first_name = "Luis_2_Jose"
+			last_name = "de_Orbegoso"
+			ruler = yes
+			birth_date = 1795.08.25
+			dna = dna_luis_jose_de_orbegoso
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			traits = {
+				romantic
+			}
+		}
+
+		create_character = {
+			is_general = yes
+			first_name = "anselmo"
+			last_name = "quiroz"
+			interest_group = ig_armed_forces
+			birth_date = 1797.04.21
+			traits = {
+				meticulous
+				basic_offensive_planner
+			}
+		}
+	}
+}
