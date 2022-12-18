@@ -13,8 +13,11 @@
 
  peru_bolivia_confederation.3.t:0 "The South Peruvian State"
  peru_bolivia_confederation.3.d:0 "The South Peruvian State is finally a reality, the people rejoice at the news!"
+ peru_bolivia_confederation.3.d2:0 "missing_desc"
  peru_bolivia_confederation.3.f:0 "We finally did it, we are independent from Peru, Long Live the Confederation!"
+ peru_bolivia_confederation.3.f2:0 "missing_flavor"
  peru_bolivia_confederation.3.a:0 "Long Live our Independence!"
+ peru_bolivia_confederation.3.b:0 "missing_option"
 
  peru_bolivia_confederation.4.t:0 "The Formalization of the Union"
  peru_bolivia_confederation.4.d:0 "After seven months from the end of the military coup, we have finally formalized our Union in the Andes, let our enemies tremble our might!"

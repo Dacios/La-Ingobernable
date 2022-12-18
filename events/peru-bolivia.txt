@@ -31,6 +31,7 @@ peru_bolivia_confederation.1 = { #Fin de la Revuelta
 	}
 
 	option = { # situacion del sur - queda en manos de bolivia
+		default_option = yes
 		name = peru_bolivia_confederation.1.a
 		c:BOL = {
 			trigger_event = {
@@ -113,6 +114,15 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			id = peru_bolivia_confederation.3
 			days = 6
 		}
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.3
+				days = 6
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	option = { # Peru Unido
@@ -124,6 +134,9 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 		add_journal_entry = {
 			type = je_dictatorship_powers
 		}
+		ai_chance = {
+			base = 10
+		}
 	}
 }
 
@@ -131,8 +144,42 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 	type = country_event
 	placement = ROOT
 	title = peru_bolivia_confederation.3.t
-	desc = peru_bolivia_confederation.3.d
-	flavor =  peru_bolivia_confederation.3.f
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = peru_bolivia_confederation.3.d
+				trigger = {
+					exists = c:BOL
+					c:BOL = THIS
+				}
+			}
+			triggered_desc = {
+				desc = peru_bolivia_confederation.3.d2
+				trigger = {
+					exists = c:ESP
+					c:PEU = THIS
+				}
+			}
+		}
+	}
+	flavor =  {
+		first_valid = {
+			triggered_desc = {
+				desc = peru_bolivia_confederation.3.f
+				trigger = {
+					exists = c:BOL
+					c:BOL = THIS
+				}
+			}
+			triggered_desc = {
+				desc = peru_bolivia_confederation.3.f2
+				trigger = {
+					exists = c:PEU
+					c:PEU = THIS
+				}
+			}
+		}
+	}
 
 	duration = 3
 
@@ -149,12 +196,26 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 		#triggered by chain
 	}
 
-	option = { #viva la independecia!
+	option = { #viva la independecia! - BOL
+		default_option = yes
 		name = peru_bolivia_confederation.3.a
+		trigger = {
+			exists = c:BOL
+			c:BOL = THIS
+		}
 		c:ESP = {
 			add_loyalists = {
 				value = 0.2
 			}
+		}	
+	}
+
+	option = { #viva la independecia! - PEU
+		default_option = yes
+		name = peru_bolivia_confederation.3.b
+		trigger = {
+			exists = c:PEU
+			cPEU = THIS
 		}	
 	}
 }
@@ -182,6 +243,7 @@ peru_bolivia_confederation.4 = { #Formalizacion - infamia
 	}
 
 	option = {
+		default_option = yes
 		name = peru_bolivia_confederation.4.a
 		create_incident = {
 			value = 50
@@ -190,12 +252,12 @@ peru_bolivia_confederation.4 = { #Formalizacion - infamia
 	}
 }
 
-peru_bolivia_confederation.5 = { #victoria de liberales
+peru_bolivia_confederation.5 = { #Test elecciones
 	type = country_event
 	placement = ROOT
-	title = peru_bolivia_confederation.2.t
-	desc = peru_bolivia_confederation.2.d
-	flavor =  peru_bolivia_confederation.2.f
+	title = peru_bolivia_confederation.5.t
+	desc = peru_bolivia_confederation.5.d
+	flavor =  peru_bolivia_confederation.5.f
 
 	duration = 3
 
@@ -212,8 +274,12 @@ peru_bolivia_confederation.5 = { #victoria de liberales
 
 	}
 
-	option = { #sufragio universal
+	option = { #census voting
+		default_option = yes
 		name = peru_bolivia_confederation.2.a
-		activate_law = law_type:law_universal_suffrage
+		activate_law = law_type:law_census_voting
+		call_election = {
+			months = 1
+		}
 	}
 }
