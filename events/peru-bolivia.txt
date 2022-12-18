@@ -87,9 +87,11 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			state = s:STATE_AREQUIPA.region_state:PEU
 		}
 		c:ESP = {
-			create_state = {
-		 		country = c:ESP
-		 		owned_provinces = { xD3F539 }
+			every_neighbouring_state = {
+		 		limit = {
+		 			owner = c:PEU
+		 		}
+		 		set_state_owner = c:ESP
 			}
 			set_relations = { country = c:BOL value = 60 }
         }
@@ -135,6 +137,86 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 		ai_chance = {
 			base = 5
 		}
+	}
+}
+
+peru_bolivia_confederation.3 = { #Viva Peru del Sur
+	type = country_event
+	placement = ROOT
+	title = peru_bolivia_confederation.3.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = peru_bolivia_confederation.3.d
+				trigger = {
+					exists = c:BOL
+					c:BOL = THIS
+				}
+			}
+			triggered_desc = {
+				desc = peru_bolivia_confederation.3.d2
+				trigger = {
+					exists = c:ESP
+					c:PEU = THIS
+				}
+			}
+		}
+	}
+	flavor =  {
+		first_valid = {
+			triggered_desc = {
+				desc = peru_bolivia_confederation.3.f
+				trigger = {
+					exists = c:BOL
+					c:BOL = THIS
+				}
+			}
+			triggered_desc = {
+				desc = peru_bolivia_confederation.3.f2
+				trigger = {
+					exists = c:PEU
+					c:PEU = THIS
+				}
+			}
+		}
+	}
+
+	duration = 3
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+		#triggered by chain
+	}
+
+	option = { #viva la independecia! - BOL
+		default_option = yes
+		name = peru_bolivia_confederation.3.a
+		trigger = {
+			exists = c:BOL
+			c:BOL = THIS
+		}
+		c:ESP = {
+			add_loyalists = {
+				value = 0.2
+			}
+		}	
+	}
+
+	option = { #viva la independecia! - PEU
+		default_option = yes
+		name = peru_bolivia_confederation.3.b
+		trigger = {
+			exists = c:PEU
+			cPEU = THIS
+		}	
 	}
 }
 
