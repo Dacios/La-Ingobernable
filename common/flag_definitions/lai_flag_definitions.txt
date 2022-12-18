@@ -57,3 +57,12 @@
 		}
 	}	
 }
+ESP = { #Estado Sud-Peruano/South Peruvian state
+    flag_definition = {
+		coa = ESP
+		subject_canton = ESP 
+		allow_overlord_canton = no
+		coa_with_overlord_canton = ESP
+		priority = 1 
+	}
+}
