@@ -221,7 +221,7 @@ PEU_communist = {
 		color2 = "yellow"		
 	}	
 }
-ESP_subject_bolivia = {
+ESP = {
 	pattern = "pattern_horizontal_split_01.tga"
 	color1 = rgb {0 121 52}
 	color2 = rgb {255 255 255}
