@@ -121,7 +121,7 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			}
 		}
 		ai_chance = {
-			base = 1
+			base = 100
 		}
 	}
 
@@ -135,7 +135,7 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			type = je_dictatorship_powers
 		}
 		ai_chance = {
-			base = 0
+			base = 5
 		}
 	}
 }
