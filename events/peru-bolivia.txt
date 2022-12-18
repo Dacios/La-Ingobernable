@@ -87,11 +87,9 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			state = s:STATE_AREQUIPA.region_state:PEU
 		}
 		c:ESP = {
-			every_neighbouring_state = {
-		 		limit = {
-		 			owner = c:PEU
-		 		}
-		 		set_state_owner = c:ESP
+			create_state = {
+		 		country = c:ESP
+		 		owned_provinces = { xD3F539 }
 			}
 			set_relations = { country = c:BOL value = 60 }
         }
