@@ -86,6 +86,12 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			origin = c:PEU
 			state = s:STATE_AREQUIPA.region_state:PEU
 		}
+		s:STATE_ICA = {
+			set_owner_of_provinces = {
+				country = c:ESP
+				provinces = { x6040B0 xB0BAC0 xE5E702 x05FB9B x25CF2A x32863F xD3F539 x52BF37 }
+			}
+		}
 		c:ESP = {
 			set_relations = { country = c:BOL value = 60 }
 		}
@@ -112,12 +118,6 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			trigger_event = {
 				id = peru_bolivia_confederation.3
 				days = 6
-			}
-		}
-		s:STATE_ICA = {
-			set_owner_of_provinces = {
-				country = c:ESP
-				provinces = { x6040B0 xB0BAC0 xE5E702 x05FB9B x25CF2A x32863F xD3F539 x52BF37 }
 			}
 		}
 		ai_chance = {
@@ -215,7 +215,7 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 		name = peru_bolivia_confederation.3.b
 		trigger = {
 			exists = c:PEU
-			cPEU = THIS
+			c:PEU = THIS
 		}	
 	}
 }
