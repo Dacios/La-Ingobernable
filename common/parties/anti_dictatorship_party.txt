@@ -1,0 +1,72 @@
+﻿# IGs against Santa Cruz extension of power
+# Should be joined by the Intelligentsia/liberals and IGs that don't approve the government
+
+radical_party = {
+	color = { 255 102 0 }
+	name = anti_dictatorship_party
+	icon = {
+		default = "/gfx/interface/icons/political_parties/radical.dds"
+	}
+	# THIS IS RUN ONLY ONCE AT GAME START
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+			country_has_voting_franchise = yes
+			any_interest_group = {
+				ig_approval < 5
+				is_marginal = no
+			}
+			c:BOL = THIS
+		}
+	}
+	join_weight = {
+		value = {
+			value = -5
+			desc = "base_value"
+		}
+		if = { # socialists and radicals won't join conservative parties
+			limit = {
+				leader = { 
+					OR = {
+						has_ideology = ideology_communist
+						has_ideology = ideology_vanguardist
+						has_ideology = ideology_anarchist
+						has_ideology = ideology_social_democrat
+						has_ideology = ideology_radical
+						has_ideology = ideology_atheist
+						has_ideology = ideology_republican
+					}
+				}
+			}
+			add = {
+				value = 50
+				desc = "from_leftist"
+			}
+		}
+		if = {
+			any_interest_group = {
+				is_marginal = no
+				NOT = { 
+					is_interest_group_type = ig_intelligentsia 
+				}
+				ig_approval > 5
+			}
+			add = -100
+			desc = "from_happy"
+		}
+		if = {
+			any_interest_group = {
+				is_marginal = no
+				NOT = { 
+					is_interest_group_type = ig_intelligentsia 
+				}
+				ig_approval < 5
+			}
+			is_interest_group_type = ig_intelligentsia
+			add = 100
+			desc = "from_angry"
+		}
+	}
+}

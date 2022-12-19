@@ -87,9 +87,11 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			state = s:STATE_AREQUIPA.region_state:PEU
 		}
 		c:ESP = {
-			create_state = {
-		 		country = c:ESP
-		 		owned_provinces = { xD3F539 }
+			every_neighbouring_state = {
+		 		limit = {
+		 			owner = c:PEU
+		 		}
+		 		set_state_owner = c:ESP
 			}
 			set_relations = { country = c:BOL value = 60 }
         }
@@ -133,7 +135,7 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			type = je_dictatorship_powers
 		}
 		ai_chance = {
-			base = 5
+			base = 10
 		}
 	}
 }
@@ -279,5 +281,14 @@ peru_bolivia_confederation.5 = { #Test elecciones
 		call_election = {
 			months = 1
 		}
+		every_interest_group = {
+			limit = {
+					has_ideology = ideology_caudillismo
+			}
+			add_modifier = {
+				name = m_temporal_elections
+				months = 12
+			}
+		}	
 	}
 }

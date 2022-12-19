@@ -1,0 +1,70 @@
+﻿# Supporters of Santa Cruz extension of power for another 10 years
+# Everyone that is happy with him will join except Intelligentsia/liberals
+
+conservative_party = {
+	color = { 108 64 179 }
+	name = dictatorship_supporters
+	icon = {
+		default = "/gfx/interface/icons/political_parties/conservatism.dds"
+	}
+	# THIS IS RUN ONLY ONCE AT GAME START
+	valid_for_country = {
+		always = yes
+	}
+	available_for_interest_group = {
+		owner = {
+			country_has_voting_franchise = yes
+			any_interest_group = {
+				ig_approval > 5
+				is_marginal = no
+			}
+			c:BOL = THIS
+		}
+		# intelligentsia will never join
+		NOT = { is_interest_group_type = ig_intelligentsia }
+	}
+	join_weight = {
+		value = {
+			value = -5
+			desc = "base_value"
+		}
+		if = { # socialists and radicals won't join conservative parties
+			limit = {
+				leader = { 
+					OR = {
+						has_ideology = ideology_communist
+						has_ideology = ideology_vanguardist
+						has_ideology = ideology_anarchist
+						has_ideology = ideology_social_democrat
+						has_ideology = ideology_radical
+						has_ideology = ideology_atheist
+						has_ideology = ideology_republican
+					}
+				}
+			}
+			add = {
+				value = -200
+				desc = "from_leftist"
+			}
+		}
+		if = {
+			any_interest_group = {
+				is_marginal = no
+				ig_approval > 5
+			}
+			add = 100
+			desc = "from_happy"
+		}
+		if = {
+			any_interest_group = {
+				is_marginal = no
+				ig_approval < 5
+				NOT = { 
+					is_interest_group_type = ig_landowners
+				}
+			}
+			add = -100
+			desc = "from_angry"
+		}
+	}
+}
