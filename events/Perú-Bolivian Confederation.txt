@@ -87,12 +87,8 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			state = s:STATE_AREQUIPA.region_state:PEU
 		}
 		c:ESP = {
-			create_state = {
-		 		country = c:ESP
-		 		owned_provinces = { xD3F539 }
-			}
 			set_relations = { country = c:BOL value = 60 }
-        }
+		}
         create_diplomatic_pact = {
             country = c:ESP
             type = puppet
@@ -116,6 +112,12 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			trigger_event = {
 				id = peru_bolivia_confederation.3
 				days = 6
+			}
+		}
+		s:STATE_ICA = {
+			set_owner_of_provinces = {
+				country = c:ESP
+				provinces = { x6040B0 xB0BAC0 xE5E702 x05FB9B x25CF2A x32863F xD3F539 x52BF37 }
 			}
 		}
 		ai_chance = {
