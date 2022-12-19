@@ -93,7 +93,7 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			}
 		}
 		c:ESP = {
-			set_relations = { country = c:BOL value = 60 }
+			set_relations = { country = c:BOL value = 80 }
 		}
         create_diplomatic_pact = {
             country = c:ESP
@@ -102,10 +102,6 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 		change_relations = {
 			country = c:PEU
 			value = -30
-		}
-		change_relations = {
-			country = c:ESP
-			value = 20
 		}
 		add_journal_entry = {
 			type = je_dictatorship_powers
