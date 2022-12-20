@@ -149,6 +149,7 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			 interest_group = ig_intelligentsia
 			 #add_character_role = ruler
 			 ruler = yes
+			 birth_date = 1788.01.23
 			 female = no
 			 culture = cu:south_andean
 			 dna = dna_nicolas_fernandez_de_pierola
