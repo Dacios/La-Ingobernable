@@ -520,34 +520,66 @@ POPS = {
 		region_state:PEU = {
 			create_pop = {
 				culture = south_andean
-				size = 48000
+				size = 14400
 			}
 			create_pop = {
 				culture = aimara
-				size = 24924
+				size = 17446.8
 			}
 			create_pop = {
 				culture = aimara
 				religion = camaquen
-				size = 55476
+				size = 44381
 			}
 			create_pop = {
 				culture = quechua
-				size = 93870
+				size = 75096
 			}
 			create_pop = {
 				culture = quechua
 				religion = camaquen
-				size = 208935
+				size = 167148
 			}
 			create_pop = {
 				culture = afro_caribeno
-				size = 2000
+				size = 300
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = afro_caribeno
-				size = 500
+				size = 100
+			}
+		region_state:PES = {
+			create_pop = {
+				culture = south_andean
+				size = 33600
+			}
+			create_pop = {
+				culture = aimara
+				size = 7478
+			}
+			create_pop = {
+				culture = aimara
+				religion = camaquen
+				size = 11095.2
+			}
+			create_pop = {
+				culture = quechua
+				size = 18774
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 41787
+			}
+			create_pop = {
+				culture = afro_caribeno
+				size = 1700
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = afro_caribeno
+				size = 400
 			}
 		}
 	}
