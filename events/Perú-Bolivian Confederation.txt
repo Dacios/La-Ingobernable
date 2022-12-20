@@ -116,9 +116,6 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 				provinces = { x8BD00A x4C2A62 xEC140B xFC221C xB43B72 xE8E12A xF192D6 x4751E8 xCF9E9F x8F231D xB29291 x2AF127 x8A5A62 x41C0D0 x5C4131 x7CD52C xA88EBF x9AE5DE xBC7468 x6809E1 x5C413B x2404C7 }
 			}
 		}
-		c:ESP = {
-			set_relations = { country = c:BOL value = 80 }
-		}
         create_diplomatic_pact = {
             country = c:ESP
             type = puppet
@@ -142,6 +139,26 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 		}
 		ai_chance = {
 			base = 100
+		}
+		c:ESP = {
+			set_relations = { country = c:BOL value = 80 }
+			create_character = {
+			 first_name = Karl_Heinrich
+			 last_name = Marx
+			 ig_leader = yes
+			 interest_group = ig_trade_unions
+			 #add_character_role = ruler
+			 ruler = yes
+			 female = no
+			 culture = cu:north_german
+			 dna = dna_karl_marx
+			 ideology = ideology_communist
+			 religion = rel:jewish
+			 traits = {
+				 direct
+				 persistent
+				}
+		    }
 		}
 	}
 
