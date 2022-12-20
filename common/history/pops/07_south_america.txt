@@ -13,7 +13,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 427596
+				size = 171039
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 256558
 			}
 			create_pop = {
 				culture = amazonian
@@ -252,7 +257,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 4004
+				size = 2803
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 1202
 			}
 		}
 		region_state:ECU = {
@@ -266,7 +276,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 3200
+				size = 1761
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 1440
 			}
 		}
 	}
@@ -278,7 +293,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = aimara
-				size = 38500
+				size = 17710
+			}
+			create_pop = {
+				culture = aimara
+				religion = camaquen
+				size = 20790
 			}
 			create_pop = {
 				culture = afro_caribeno
@@ -299,7 +319,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = aimara
-				size = 64200
+				size = 37236
+			}
+			create_pop = {
+				culture = aimara
+				religion = camaquen
+				size = 26964
 			}
 			create_pop = {
 				culture = afro_caribeno
@@ -307,7 +332,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 3400
+				size = 1972
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 1428
 			}
 		}
 	}
@@ -323,7 +353,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 102800
+				size = 38036
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 64764
 			}
 			create_pop = {
 				culture = guarani
@@ -339,11 +374,21 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 321000
+				size = 128400
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen 
+				size = 192600
 			}
 			create_pop = {
 				culture = aimara
-				size = 268004
+				size = 107202
+			}
+			create_pop = {
+				culture = aimara
+				religion = camaquen
+				size = 160803
 			}
 			create_pop = {
 				culture = amazonian
@@ -363,11 +408,21 @@ POPS = {
 			}
 			create_pop = {
 				culture = aimara
-				size = 121996
+				size = 26840
+			}
+			create_pop = {
+				culture = aimara
+				religion = camaquen
+				size = 95157
 			}
 			create_pop = {
 				culture = quechua
-				size = 14000
+				size = 3080
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 10920
 			}
 		}
 	}
@@ -392,7 +447,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 186696
+				size = 88681
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 98016
 			}
 		}
 	}
@@ -404,7 +464,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 212000
+				size = 80030
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 131970
 			}
 			create_pop = {
 				culture = afro_caribeno
@@ -438,7 +503,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 302804
+				size = 96141
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 206664
 			}
 			create_pop = {
 				culture = amazonian
@@ -454,11 +524,21 @@ POPS = {
 			}
 			create_pop = {
 				culture = aimara
-				size = 80400
+				size = 24924
+			}
+			create_pop = {
+				culture = aimara
+				religion = camaquen
+				size = 55476
 			}
 			create_pop = {
 				culture = quechua
-				size = 146500
+				size = 93870
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 208935
 			}
 			create_pop = {
 				culture = afro_caribeno
@@ -500,7 +580,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 48000
+				size = 10560
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 37440
 			}
 			create_pop = {
 				culture = platinean
@@ -514,7 +599,12 @@ POPS = {
 			}
 			create_pop = {
 				culture = quechua
-				size = 3100
+				size = 682
+			}
+			create_pop = {
+				culture = quechua
+				religion = camaquen
+				size = 2418
 			}
 		}
 	}
