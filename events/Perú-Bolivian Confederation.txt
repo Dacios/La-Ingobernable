@@ -143,20 +143,20 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 		c:ESP = {
 			set_relations = { country = c:BOL value = 80 }
 			create_character = {
-			 first_name = Karl_Heinrich
-			 last_name = Marx
+			 first_name = nicolas
+			 last_name = fernandez_de_pierola
 			 ig_leader = yes
-			 interest_group = ig_trade_unions
+			 interest_group = ig_intelligentsia
 			 #add_character_role = ruler
 			 ruler = yes
 			 female = no
-			 culture = cu:north_german
-			 dna = dna_karl_marx
-			 ideology = ideology_communist
-			 religion = rel:jewish
+			 culture = cu:south_andean
+			 dna = dna_nicolas_fernandez_de_pierola
+			 ideology = ideology_meritocratic
+			 religion = rel:catholic
 			 traits = {
-				 direct
 				 persistent
+				 basic_diplomat
 				}
 		    }
 		}
