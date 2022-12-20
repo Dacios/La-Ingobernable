@@ -12,8 +12,9 @@
 			ideology = ideology_moderate
 			traits = {
 				ambitious
-				popular_commander
-				experienced_offensive_planner
+				celebrity_commander
+				expert_political_operator
+				basic_offensive_planner
 			}
 		}
 	}
