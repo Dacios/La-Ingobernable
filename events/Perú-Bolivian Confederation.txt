@@ -227,9 +227,25 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 			add_loyalists = {
 				value = 0.2
 			}
-		}	
-	}
-
+			create_character = {
+			 first_name = ramon
+			 last_name = herrera
+			 ig_leader = yes
+			 interest_group = ig_armed_forces
+			 #add_character_role = ruler
+			 ruler = yes
+			 female = no
+			 culture = cu:south_andean
+			 dna = dna_ramon_herrera
+			 ideology = ideology_moderate
+			 religion = rel:catholic
+			 traits = {
+				tactful
+				traditionalist_commander
+				basic_diplomat
+			}
+		}
+	}	
 	option = { #viva la independecia! - PEU
 		default_option = yes
 		name = peru_bolivia_confederation.3.b
