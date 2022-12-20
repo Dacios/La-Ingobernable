@@ -524,7 +524,7 @@ POPS = {
 			}
 			create_pop = {
 				culture = aimara
-				size = 17446.8
+				size = 17447
 			}
 			create_pop = {
 				culture = aimara
