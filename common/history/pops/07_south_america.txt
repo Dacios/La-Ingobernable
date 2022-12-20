@@ -549,6 +549,7 @@ POPS = {
 				culture = afro_caribeno
 				size = 100
 			}
+		}
 		region_state:PES = {
 			create_pop = {
 				culture = south_andean
