@@ -1,8 +1,6 @@
 CHARACTERS = {
 	c:PEU = {
 		create_character = {
-			# Luis Jose de Orbegoso
-			#role = politician # Remove this line
 			first_name = "Luis_2_Jose"
 			last_name = "de_Orbegoso"
 			ruler = yes
