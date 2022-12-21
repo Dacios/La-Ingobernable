@@ -251,7 +251,6 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 			ig:ig_landowners = {
 			 remove_ideology = ideology_paternalistic
 			 add_ideology = ideology_caudillismo
-			 add_ruling_interest_group = yes
 		    }
 			add_loyalists = {
 				value = 0.3
