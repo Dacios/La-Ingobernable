@@ -19,8 +19,10 @@ CHARACTERS = {
 			is_general = yes
 			first_name = "anselmo"
 			last_name = "quiroz"
+			ig_leader = yes
 			interest_group = ig_armed_forces
 			birth_date = 1797.04.21
+			ideology = ideology_moderate
 			traits = {
 				meticulous
 				basic_offensive_planner
