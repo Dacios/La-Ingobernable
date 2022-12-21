@@ -2,7 +2,8 @@
 
 dna_blas_cardeñas = {
     portrait_info = {
-	genes={ 		hair_color={ 255 172 0 0 }
+	genes={ 		
+		hair_color={ 255 172 0 0 }
  		skin_color={ 0 0 0 0 }
  		eye_color={ 1 255 0 0 }
  		gene_cheek_fat={ "cheek_fat" 104 "cheek_fat" 127 }
