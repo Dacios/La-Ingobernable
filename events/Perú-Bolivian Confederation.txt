@@ -246,21 +246,39 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 				value = 0.2
 			}
 			create_character = {
+			  first_name = pio
+			  last_name = tristan
+			  ig_leader = no
+			  interest_group = ig_armed_forces
+			  ruler = yes
+			  birth_date = 1773.07.11
+			  female = no
+			  culture = cu:south_andean
+			  dna = dna_pio_tristan
+			  ideology = ideology_moderate
+			  religion = rel:catholic
+			  traits = { 
+				 reserved
+                 tactful
+                 experienced_defensive_strategist
+				}
+			}
+			create_character = {
 			 first_name = ramon
 			 last_name = herrera
 			 ig_leader = yes
 			 interest_group = ig_armed_forces
-			 #add_character_role = ruler
-			 ruler = yes
+			 birth_date = 1799.12.7
 			 female = no
 			 culture = cu:south_andean
 			 dna = dna_ramon_herrera
 			 ideology = ideology_moderate
 			 religion = rel:catholic
-			 traits = {
-				tactful
-				traditionalist_commander
-				basic_diplomat
+			 traits = { 
+				 tactful
+				 traditionalist_commander
+				 basic_diplomat
+				}
 			}
 		}
 	}	
