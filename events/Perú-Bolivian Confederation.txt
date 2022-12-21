@@ -290,6 +290,23 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 				 basic_diplomat
 				}
 			}
+			create_character = {
+				first_name = blas
+				last_name = cardeña
+				ig_leader = no 
+				interest_group = ig_armed_forces
+				is_general = yes
+				birth_date = 1792.2.2
+				female = no 
+				culture = cu:south_andean 
+				dna = dna_blas_cardeñas
+				ideology = ideology_moderate
+				religion = rel:catholic
+				traits = {
+					reserved
+					experienced_offensive_planner 
+				}
+			}
 		}
 	}	
 	option = { #viva la independecia! - PEU
