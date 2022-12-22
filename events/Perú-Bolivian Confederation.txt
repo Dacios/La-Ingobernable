@@ -119,10 +119,7 @@ peru_bolivia_confederation.2 = { #El destino del Perú
         }
 		change_relations = {
 			country = c:PEU
-			value = -30
-		}
-		add_journal_entry = {
-			type = je_dictatorship_powers
+			value = -40
 		}
 		trigger_event = {
 			id = peru_bolivia_confederation.3
@@ -166,9 +163,6 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			country = c:PEU
 			value = -15
 		}
-		add_journal_entry = {
-			type = je_dictatorship_powers
-		}
 		ai_chance = {
 			base = 5
 		}
@@ -204,7 +198,7 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -311,7 +305,7 @@ peru_bolivia_confederation.4 = { #Formalizacion - infamia
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -331,13 +325,24 @@ peru_bolivia_confederation.4 = { #Formalizacion - infamia
 		add_journal_entry = {
 			type = je_peru_bolivia_li
 		}
+		add_journal_entry = {
+			type = je_dictatorship_powers
+		}
     }
 	option = {
 		default_option = yes
 		name = peru_bolivia_confederation.4.a
 		create_incident = {
-			value = 50
+			value = 15
 			country = c:PEU
+		}
+		change_relations = {
+			country = c:ARG
+			value = -50
+		}
+		change_relations = {
+			country = c:CHL
+			value = -50
 		}
 	}
 }
