@@ -69,9 +69,6 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			name = peru_bolivia_var
 			value = 0
 		}
-		add_journal_entry = {
-			type = je_peru_bolivia_li
-		}
 		trigger_event = {
 			id = peru_bolivia_confederation.4
 			months = 7
@@ -181,18 +178,17 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 peru_bolivia_confederation.3 = { #Viva Peru del Sur
 	type = country_event
 	placement = ROOT
-	title = peru_bolivia_confederation.3.t
-	desc = {
+	title = {
 		first_valid = {
 			triggered_desc = {
-				desc = peru_bolivia_confederation.3.d
+				desc = peru_bolivia_confederation.3.t
 				trigger = {
 					exists = c:BOL
 					c:BOL = THIS
 				}
 			}
 			triggered_desc = {
-				desc = peru_bolivia_confederation.3.d2
+				desc = peru_bolivia_confederation.3.t2
 				trigger = {
 					exists = c:ESP
 					c:PEU = THIS
@@ -200,24 +196,10 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 			}
 		}
 	}
-	flavor =  {
-		first_valid = {
-			triggered_desc = {
-				desc = peru_bolivia_confederation.3.f
-				trigger = {
-					exists = c:BOL
-					c:BOL = THIS
-				}
-			}
-			triggered_desc = {
-				desc = peru_bolivia_confederation.3.f2
-				trigger = {
-					exists = c:PEU
-					c:PEU = THIS
-				}
-			}
-		}
-	}
+
+	desc = peru_bolivia_confederation.3.d
+
+	flavor =  peru_bolivia_confederation.3.f
 
 	duration = 3
 
@@ -340,7 +322,16 @@ peru_bolivia_confederation.4 = { #Formalizacion - infamia
 	trigger = {
 
 	}
-
+	
+	immediate = {
+		set_variable = {
+			name = peru_bolivia_var
+			value = 0
+		}
+		add_journal_entry = {
+			type = je_peru_bolivia_li
+		}
+    }
 	option = {
 		default_option = yes
 		name = peru_bolivia_confederation.4.a
