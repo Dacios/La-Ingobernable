@@ -292,4 +292,10 @@ GLOBAL = {
 			value = 1.2
 		}
 	}
+
+	c:BOL = {
+		trigger_event = {
+			id = peru_bolivia_confederation.0
+		}
+	}
 }
