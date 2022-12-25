@@ -249,39 +249,20 @@ POPS = {
 		region_state:PEU = {
 			create_pop = {
 				culture = amazonian
-				size = 40000
+				size = 80000
 			}
 			create_pop = {
 				culture = south_andean
-				size = 11996
+				size = 13696
 			}
 			create_pop = {
 				culture = quechua
-				size = 2803
+				size = 4564
 			}
 			create_pop = {
 				culture = quechua
 				religion = camaquen
-				size = 1202
-			}
-		}
-		region_state:ECU = {
-			create_pop = {
-				culture = amazonian
-				size = 32000
-			}
-			create_pop = {
-				culture = south_andean
-				size = 1700
-			}
-			create_pop = {
-				culture = quechua
-				size = 1761
-			}
-			create_pop = {
-				culture = quechua
-				religion = camaquen
-				size = 1440
+				size = 2642
 			}
 		}
 	}
