@@ -1093,40 +1093,68 @@ on_resource_depleted = {
 
 # Root = Country
 on_peace_agreement_signed_war_leader = {
-	events = {
-		peru_bolivia_confederation.1
-	}
 	effect = {
 		post_notification = peace_agreement_signed_war_leader
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
 	}
 }
 
 # Root = Country
 on_peace_agreement_signed_war_participant = {
-	events = {
-		peru_bolivia_confederation.1
-	}
 	effect = {
 		post_notification = peace_agreement_signed_war_participant
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
 	}
 }
 
 # Root = Country
 on_peace_agreement_signed_non_participant = {
-	events = {
-		peru_bolivia_confederation.1
-	}
 	effect = {
 		post_notification = peace_agreement_signed_non_participant
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
 	}
 }
 
 # Root = Country
 on_capitulation = {
-	events = {
-		peru_bolivia_confederation.1
-	}
 	effect = {
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
 	}
 }
 
@@ -1143,11 +1171,18 @@ on_self_capitulated_notification = {
 
 # Root = Country
 on_enemy_capitulated_notification = {
-	events = {
-		peru_bolivia_confederation.1
-	}
 	effect = {
 		post_notification = enemy_capitulated
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
 	}
 }
 
@@ -1625,16 +1660,22 @@ on_civil_war_won = {
 
 # Root = Country
 on_wargoal_enforced = {
-	events = {
-		peru_bolivia_confederation.1
-	}
 	effect = {
 		set_variable = {
             name = recently_won_war
             days = 600
             value = yes
         }
-        
+        c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.1
+			}	
+		}
 	}
 	
 }
