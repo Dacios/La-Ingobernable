@@ -1100,57 +1100,7 @@ on_peace_agreement_signed_war_leader = {
 				id = peru_bolivia_confederation.1
 			}	
 		}
-		c:PEU = {
-			trigger_event = {
-				id = peru_bolivia_confederation.1
-			}	
-		}
-	}
-}
-
-# Root = Country
-on_peace_agreement_signed_war_participant = {
-	effect = {
-		post_notification = peace_agreement_signed_war_participant
-		c:PEU = {
-			trigger_event = {
-				id = peru_bolivia_confederation.1
-			}	
-		}
-		c:PEU = {
-			trigger_event = {
-				id = peru_bolivia_confederation.1
-			}	
-		}
-	}
-}
-
-# Root = Country
-on_peace_agreement_signed_non_participant = {
-	effect = {
-		post_notification = peace_agreement_signed_non_participant
-		c:PEU = {
-			trigger_event = {
-				id = peru_bolivia_confederation.1
-			}	
-		}
-		c:PEU = {
-			trigger_event = {
-				id = peru_bolivia_confederation.1
-			}	
-		}
-	}
-}
-
-# Root = Country
-on_capitulation = {
-	effect = {
-		c:PEU = {
-			trigger_event = {
-				id = peru_bolivia_confederation.1
-			}	
-		}
-		c:PEU = {
+		c:BOL = {
 			trigger_event = {
 				id = peru_bolivia_confederation.1
 			}	
@@ -1165,23 +1115,6 @@ on_self_capitulated_notification = {
 		set_variable = {
 			name = recent_capitulation
 			months = short_modifier_time
-		}
-	}
-}
-
-# Root = Country
-on_enemy_capitulated_notification = {
-	effect = {
-		post_notification = enemy_capitulated
-		c:PEU = {
-			trigger_event = {
-				id = peru_bolivia_confederation.1
-			}	
-		}
-		c:PEU = {
-			trigger_event = {
-				id = peru_bolivia_confederation.1
-			}	
 		}
 	}
 }
@@ -1671,7 +1604,7 @@ on_wargoal_enforced = {
 				id = peru_bolivia_confederation.1
 			}	
 		}
-		c:PEU = {
+		c:BOL = {
 			trigger_event = {
 				id = peru_bolivia_confederation.1
 			}	
