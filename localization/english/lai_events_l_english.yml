@@ -1,9 +1,19 @@
 ﻿l_english:
   ## PERU-BOLIVIA EVENTS
- peru_bolivia_confederation.1.t:0 "End of the Coup"
- peru_bolivia_confederation.1.d:0 "The revolt started by Salaverry has come to an end, now the southern issue most be resolved, but not by ourselves"
- peru_bolivia_confederation.1.f:0 "I did everything I could to maintain our country alive, but now I don't have a say in the southern matter, kind of absurd don't you think"
- peru_bolivia_confederation.1.a:0 "This will be decided by Santa Cruz"
+ peru_bolivia_confederation.0.t:0 "Crisis and Opportunity"
+ peru_bolivia_confederation.0.t2:0 "Desperate Times, Desperate Measures"
+ peru_bolivia_confederation.0.d:0 "The Caudillos have submerged Perú in anarchy, the brief peace found after the end of the civil war of 1834 has been broken by the general inspector of the militias Felipe Santiago Salaverry, self-proclaimed Supreme Chief of the Republic, who quickly reduced the territory controled by Orbegoso to only to the city of Arequipa which soon saw a new threat on the horizon with the arrival of General Gamarra who, after planning together with the president of Bolivia, Andrés de Santa Cruz, the conformation of the Peru-Bolivian confederation decided to march and take Cuzco without having formalized the pact. Orbegoso, overwhelmed by the situation, asked Santa Cruz for help with permission from congress to rescue him from the labyrinth in which he found himself in exchange for allowing him to form the confederation as he pleased"
+ peru_bolivia_confederation.0.f:0 "Thus, a little less than a year after the coup, the Bolivian army and the Peruvian forces loyal to Orbegoso have turned the tables. Gamarra is in exile after a shameful defeat on the battlefield and the territory controlled by Salaverry is limited to Arequipa and the Real Felipe fortress in Callao."
+ peru_bolivia_confederation.0.b:0 "Let's not trow away our shot!"
+ peru_bolivia_confederation.0.a:0 "Crush the traitor!"
+ 
+ peru_bolivia_confederation.1.t:0 "A Clean Board"
+ peru_bolivia_confederation.1.t2:0 "The Price of the War"
+ peru_bolivia_confederation.1.d:0 "With the defeat of Salaverry, Peru lies at the mercy of President Santa Cruz, presenting an unprecedented opportunity to unify the former territories of the viceroyalty and Tahuantinsuyo and make them the center of America as they were before and after the arrival of the Castilian men and shall be in the future"
+ peru_bolivia_confederation.1.d2:0 "Salaverry has been defeated, however, far from having reestablished the constitutional order, the wars have placed Peru at the mercy of the popular caudillo Santa Cruz who undoubtedly will seek to favor Bolivia over Perú"
+ peru_bolivia_confederation.1.f:0 "With the confederation at our doorstep, it is up to him to decide what form it will take and if the experiment will be successful or perish before its enemies."
+ peru_bolivia_confederation.1.a:0 "Let's get down to business"
+ peru_bolivia_confederation.1.b:0 "Not only time will tell..."
 
  peru_bolivia_confederation.2.t:0 "The Fate of Perú"
  peru_bolivia_confederation.2.d:0 "Now that Salavverry's military coup has been defeated, we must consolidate the structure of the Confederation. One of first issues since the day od it's conception was South Peru, a region that demanded more autonomy from Lima"

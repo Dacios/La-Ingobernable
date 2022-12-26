@@ -3,18 +3,35 @@ namespace = peru_bolivia_confederation
 peru_bolivia_confederation.0 = { #context
 	type = country_event
 	placement = ROOT
-	title = peru_bolivia_confederation.0.t
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = peru_bolivia_confederation.0.t
+				trigger = {
+					exists = c:BOL
+					c:BOL = THIS
+				}
+			}
+			triggered_desc = {
+				desc = peru_bolivia_confederation.0.t2
+				trigger = {
+					exists = c:PEU
+					c:PEU = THIS
+				}
+			}
+		}
+	}
 	desc = peru_bolivia_confederation.0.d
 	flavor =  peru_bolivia_confederation.0.f
 
 	duration = 3
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/war_civilians"
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
@@ -22,27 +39,74 @@ peru_bolivia_confederation.0 = { #context
 		#triggered at the start
 	}
 
-	option = { #census voting
+	option = { 
 		default_option = yes
 		name = peru_bolivia_confederation.0.a
+		trigger = {
+			exists = c:PEU
+			c:PEU = THIS
+		}	
+	}
+
+	option = { 
+		default_option = yes
+		name = peru_bolivia_confederation.0.b
+		trigger = {
+			exists = c:BOL
+			c:BOL = THIS
+		}	
 	}
 }
 
 peru_bolivia_confederation.1 = { #Fin de la Revuelta
 	type = country_event
 	placement = ROOT
-	title = peru_bolivia_confederation.1.t
-	desc = peru_bolivia_confederation.1.d
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = peru_bolivia_confederation.1.t
+				trigger = {
+					exists = c:BOL
+					c:BOL = THIS
+				}
+			}
+			triggered_desc = {
+				desc = peru_bolivia_confederation.1.t2
+				trigger = {
+					exists = c:PEU
+					c:PEU = THIS
+				}
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = peru_bolivia_confederation.1.d
+				trigger = {
+					exists = c:BOL
+					c:BOL = THIS
+				}
+			}
+			triggered_desc = {
+				desc = peru_bolivia_confederation.1.d2
+				trigger = {
+					exists = c:PEU
+					c:PEU = THIS
+				}
+			}
+		}
+	}
 	flavor =  peru_bolivia_confederation.1.f
 
 	duration = 1
 
 	event_image = {
-		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+		video = "gfx/event_pictures/military_parade.bk2"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/military_parade"
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
@@ -67,6 +131,15 @@ peru_bolivia_confederation.1 = { #Fin de la Revuelta
 				days = 30
 			}
 		}
+	}
+	
+	option = { 
+		default_option = yes
+		name = peru_bolivia_confederation.1.b
+		trigger = {
+			exists = c:BOL
+			c:BOL = THIS
+		}	
 	}
 }
 
