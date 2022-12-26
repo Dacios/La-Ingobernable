@@ -58,44 +58,43 @@ peru_bolivia_confederation.0 = { #context
 	}
 }
 
-peru_bolivia_confederation.1 = { #Fin de la Revuelta
+peru_bolivia_confederation.01 = { #Fin de la Revuelta BOL
 	type = country_event
 	placement = ROOT
-	title = {
-		first_valid = {
-			triggered_desc = {
-				desc = peru_bolivia_confederation.1.t
-				trigger = {
-					exists = c:BOL
-					c:BOL = THIS
-				}
-			}
-			triggered_desc = {
-				desc = peru_bolivia_confederation.1.t2
-				trigger = {
-					exists = c:PEU
-					c:PEU = THIS
-				}
-			}
-		}
+	title = peru_bolivia_confederation.1.t
+	desc = peru_bolivia_confederation.1.d
+	flavor =  peru_bolivia_confederation.1.f
+
+	duration = 1
+
+	event_image = {
+		video = "gfx/event_pictures/military_parade.bk2"
 	}
-	desc = {
-		first_valid = {
-			triggered_desc = {
-				desc = peru_bolivia_confederation.1.d
-				trigger = {
-					exists = c:BOL
-					c:BOL = THIS
-				}
-			}
-			triggered_desc = {
-				desc = peru_bolivia_confederation.1.d2
-				trigger = {
-					exists = c:PEU
-					c:PEU = THIS
-				}
-			}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/military_parade"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+		c:PEU = {
+			is_at_war = no
 		}
+		c:BOL = this
+		NOT = { has_global_variable = coup_ended  }
+	}
+
+	option = { 
+		default_option = yes
+		name = peru_bolivia_confederation.1.b
+	}
+}
+
+peru_bolivia_confederation.1 = { #Fin de la Revuelta PEU
+	type = country_event
+	placement = ROOT
+	title = peru_bolivia_confederation.1.t2
+	desc = peru_bolivia_confederation.1.d2
 	}
 	flavor =  peru_bolivia_confederation.1.f
 
@@ -114,11 +113,10 @@ peru_bolivia_confederation.1 = { #Fin de la Revuelta
 		c:PEU = {
 			is_at_war = no
 		}
-		c:PEU = ROOT
-		c:BOL = ROOT	
+		c:PEU = this
 		NOT = { has_global_variable = coup_ended  }
 	}
-	
+
 	immediate = {
 		set_global_variable = { name = coup_ended }
 	}
@@ -132,19 +130,6 @@ peru_bolivia_confederation.1 = { #Fin de la Revuelta
 				days = 30
 			}
 		}
-		trigger = {
-			exists = c:PEU
-			c:PEU = THIS
-		}	
-	}
-	
-	option = { 
-		default_option = yes
-		name = peru_bolivia_confederation.1.b
-		trigger = {
-			exists = c:BOL
-			c:BOL = THIS
-		}	
 	}
 }
 
