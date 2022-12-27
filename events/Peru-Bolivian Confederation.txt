@@ -76,6 +76,10 @@ peru_bolivia_confederation.01 = { #Fin de la Revuelta BOL
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
+	immediate = {
+		set_global_variable = { name = coup_ended }
+	}
+
 	trigger = {
 		c:PEU = {
 			is_at_war = no
@@ -109,16 +113,16 @@ peru_bolivia_confederation.1 = { #Fin de la Revuelta PEU
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
+	immediate = {
+		set_global_variable = { name = coup_ended2 }
+	}
+
 	trigger = {
 		c:PEU = {
 			is_at_war = no
 		}
 		c:PEU = this
-		NOT = { has_global_variable = coup_ended  }
-	}
-
-	immediate = {
-		set_global_variable = { name = coup_ended }
+		NOT = { has_global_variable = coup_ended2  }
 	}
 
 	option = { # situacion del sur - queda en manos de bolivia
