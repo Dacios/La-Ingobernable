@@ -7,7 +7,7 @@
 			ruler = yes
 			dna = dna_jean_pierre_boyer
 			age = 60
-			culture: cu:afro_caribeno
+			culture = cu:afro_caribeno
 			interest_group = ig_armed_forces
 			ideology = ideology_jingoist_leader
 			traits = {

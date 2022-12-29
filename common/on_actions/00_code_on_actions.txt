@@ -1095,7 +1095,6 @@ on_resource_depleted = {
 on_peace_agreement_signed_war_leader = {
 	events = {
 		peru_bolivia_confederation.1
-		peru_bolivia_confederation.01
 	}
 	effect = {
 		post_notification = peace_agreement_signed_war_leader
@@ -1106,7 +1105,6 @@ on_peace_agreement_signed_war_leader = {
 on_peace_agreement_signed_war_participant = {
 	events = {
 		peru_bolivia_confederation.1
-		peru_bolivia_confederation.01
 	}
 	effect = {
 		post_notification = peace_agreement_signed_war_participant
@@ -1117,7 +1115,6 @@ on_peace_agreement_signed_war_participant = {
 on_peace_agreement_signed_non_participant = {
 	events = {
 		peru_bolivia_confederation.1
-		peru_bolivia_confederation.01
 	}
 	effect = {
 		post_notification = peace_agreement_signed_non_participant
@@ -1128,7 +1125,6 @@ on_peace_agreement_signed_non_participant = {
 on_capitulation = {
 	events = {
 		peru_bolivia_confederation.1
-		peru_bolivia_confederation.01
 	}
 	effect = {
 	}
@@ -1149,7 +1145,6 @@ on_self_capitulated_notification = {
 on_enemy_capitulated_notification = {
 	events = {
 		peru_bolivia_confederation.1
-		peru_bolivia_confederation.01
 	}
 	effect = {
 		post_notification = enemy_capitulated
@@ -1630,10 +1625,6 @@ on_civil_war_won = {
 
 # Root = Country
 on_wargoal_enforced = {
-	events = {
-		peru_bolivia_confederation.1
-		peru_bolivia_confederation.01
-	}
 	effect = {
 		set_variable = {
             name = recently_won_war

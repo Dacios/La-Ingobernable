@@ -1,19 +1,19 @@
 namespace = peru_bolivia_confederation
 
-peru_bolivia_confederation.0 = { #context
+peru_bolivia_confederation.1 = { #context
 	type = country_event
 	placement = ROOT
 	title = {
 		first_valid = {
 			triggered_desc = {
-				desc = peru_bolivia_confederation.0.t
+				desc = peru_bolivia_confederation.1.t
 				trigger = {
 					exists = c:BOL
 					c:BOL = THIS
 				}
 			}
 			triggered_desc = {
-				desc = peru_bolivia_confederation.0.t2
+				desc = peru_bolivia_confederation.1.t2
 				trigger = {
 					exists = c:PEU
 					c:PEU = THIS
@@ -21,8 +21,8 @@ peru_bolivia_confederation.0 = { #context
 			}
 		}
 	}
-	desc = peru_bolivia_confederation.0.d
-	flavor =  peru_bolivia_confederation.0.f
+	desc = peru_bolivia_confederation.1.d
+	flavor =  peru_bolivia_confederation.1.f
 
 	duration = 3
 
@@ -41,7 +41,7 @@ peru_bolivia_confederation.0 = { #context
 
 	option = { 
 		default_option = yes
-		name = peru_bolivia_confederation.0.a
+		name = peru_bolivia_confederation.1.a
 		trigger = {
 			exists = c:PEU
 			c:PEU = THIS
@@ -50,7 +50,7 @@ peru_bolivia_confederation.0 = { #context
 
 	option = { 
 		default_option = yes
-		name = peru_bolivia_confederation.0.b
+		name = peru_bolivia_confederation.1.b
 		trigger = {
 			exists = c:BOL
 			c:BOL = THIS
@@ -58,48 +58,28 @@ peru_bolivia_confederation.0 = { #context
 	}
 }
 
-peru_bolivia_confederation.01 = { #Fin de la Revuelta BOL
+peru_bolivia_confederation.2 = { #Fin de la Revuelta
 	type = country_event
 	placement = ROOT
-	title = peru_bolivia_confederation.1.t
-	desc = peru_bolivia_confederation.1.d
-	flavor =  peru_bolivia_confederation.1.f
-
-	duration = 1
-
-	event_image = {
-		video = "gfx/event_pictures/military_parade.bk2"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/unspecific/military_parade"
-
-	icon = "gfx/interface/icons/event_icons/event_default.dds"
-
-	immediate = {
-		set_global_variable = { name = coup_ended }
-	}
-
-	trigger = {
-		c:PEU = {
-			is_at_war = no
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = peru_bolivia_confederation.1.t
+				trigger = {
+					exists = c:BOL
+					c:BOL = THIS
+				}
+			}
+			triggered_desc = {
+				desc = peru_bolivia_confederation.1.t2
+				trigger = {
+					exists = c:PEU
+					c:PEU = THIS
+				}
+			}
 		}
-		c:BOL = this
-		NOT = { has_global_variable = coup_ended  }
 	}
-
-	option = { 
-		default_option = yes
-		name = peru_bolivia_confederation.1.b
-	}
-}
-
-peru_bolivia_confederation.1 = { #Fin de la Revuelta PEU
-	type = country_event
-	placement = ROOT
-	title = peru_bolivia_confederation.1.t2
 	desc = peru_bolivia_confederation.1.d2
-	}
 	flavor =  peru_bolivia_confederation.1.f
 
 	duration = 1
@@ -137,7 +117,7 @@ peru_bolivia_confederation.1 = { #Fin de la Revuelta PEU
 	}
 }
 
-peru_bolivia_confederation.2 = { #El destino del Perú
+peru_bolivia_confederation.3 = { #El destino del Perú
 	type = country_event
 	placement = ROOT
 	title = peru_bolivia_confederation.2.t
@@ -217,12 +197,12 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			value = -40
 		}
 		trigger_event = {
-			id = peru_bolivia_confederation.3
+			id = peru_bolivia_confederation.4
 			days = 6
 		}
 		c:PEU = {
 			trigger_event = {
-				id = peru_bolivia_confederation.3
+				id = peru_bolivia_confederation.4
 				days = 6
 			}
 		}
@@ -236,7 +216,6 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 			 last_name = fernandez_de_pierola
 			 ig_leader = yes
 			 interest_group = ig_intelligentsia
-			 #add_character_role = ruler
 			 ruler = yes
 			 birth_date = 1788.01.23
 			 female = no
@@ -264,7 +243,7 @@ peru_bolivia_confederation.2 = { #El destino del Perú
 	}
 }
 
-peru_bolivia_confederation.3 = { #Viva Peru del Sur
+peru_bolivia_confederation.4 = { #Viva Peru del Sur
 	type = country_event
 	placement = ROOT
 	title = {
@@ -363,7 +342,7 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 			}
 			create_character = {
 				first_name = blas
-				last_name = cardeña
+				last_name = cardena
 				ig_leader = no 
 				interest_group = ig_armed_forces
 				is_general = yes
@@ -390,7 +369,7 @@ peru_bolivia_confederation.3 = { #Viva Peru del Sur
 	}
 }
 
-peru_bolivia_confederation.4 = { #Formalizacion - infamia
+peru_bolivia_confederation.5 = { #Formalizacion - infamia
 	type = country_event
 	placement = ROOT
 	title = peru_bolivia_confederation.4.t
@@ -442,7 +421,7 @@ peru_bolivia_confederation.4 = { #Formalizacion - infamia
 	}
 }
 
-peru_bolivia_confederation.5 = { #Test elecciones
+peru_bolivia_confederation.6 = { #Test elecciones
 	type = country_event
 	placement = ROOT
 	title = peru_bolivia_confederation.5.t

@@ -295,13 +295,13 @@ GLOBAL = {
 
 	c:BOL = {
 		trigger_event = {
-			id = peru_bolivia_confederation.0
+			id = peru_bolivia_confederation.1
 		}
 	}
 
 	c:PEU = {
 		trigger_event = {
-			id = peru_bolivia_confederation.0
+			id = peru_bolivia_confederation.1
 		}
 	}
 }
