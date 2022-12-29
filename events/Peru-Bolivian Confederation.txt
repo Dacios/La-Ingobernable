@@ -112,9 +112,10 @@ peru_bolivia_confederation.2 = { #Fin de la Revuelta
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
 	trigger = {
-		c:PEU = {
-			is_at_war = no
-		}
+		OR = {
+		  c:PEU = THIS
+		  c:BOL = THIS
+		} 
 		NOT = { has_global_variable = coup_ended }
 	}
 	
