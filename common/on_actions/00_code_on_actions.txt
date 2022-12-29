@@ -1094,7 +1094,7 @@ on_resource_depleted = {
 # Root = Country
 on_peace_agreement_signed_war_leader = {
 	events = {
-		peru_bolivia_confederation.1
+		peru_bolivia_confederation.2
 	}
 	effect = {
 		post_notification = peace_agreement_signed_war_leader
@@ -1104,7 +1104,7 @@ on_peace_agreement_signed_war_leader = {
 # Root = Country
 on_peace_agreement_signed_war_participant = {
 	events = {
-		peru_bolivia_confederation.1
+		peru_bolivia_confederation.2
 	}
 	effect = {
 		post_notification = peace_agreement_signed_war_participant
@@ -1114,7 +1114,7 @@ on_peace_agreement_signed_war_participant = {
 # Root = Country
 on_peace_agreement_signed_non_participant = {
 	events = {
-		peru_bolivia_confederation.1
+		peru_bolivia_confederation.2
 	}
 	effect = {
 		post_notification = peace_agreement_signed_non_participant
@@ -1124,7 +1124,7 @@ on_peace_agreement_signed_non_participant = {
 # Root = Country
 on_capitulation = {
 	events = {
-		peru_bolivia_confederation.1
+		peru_bolivia_confederation.2
 	}
 	effect = {
 	}
@@ -1144,7 +1144,7 @@ on_self_capitulated_notification = {
 # Root = Country
 on_enemy_capitulated_notification = {
 	events = {
-		peru_bolivia_confederation.1
+		peru_bolivia_confederation.2
 	}
 	effect = {
 		post_notification = enemy_capitulated

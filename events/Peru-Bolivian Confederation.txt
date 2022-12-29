@@ -1,6 +1,6 @@
 namespace = peru_bolivia_confederation
 
-peru_bolivia_confederation.1 = { #context
+peru_bolivia_confederation.1 = { #Historical Context
 	type = country_event
 	placement = ROOT
 	title = {
@@ -24,7 +24,7 @@ peru_bolivia_confederation.1 = { #context
 	desc = peru_bolivia_confederation.1.d
 	flavor =  peru_bolivia_confederation.1.f
 
-	duration = 3
+	duration = 1
 
 	event_image = {
 		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
@@ -39,12 +39,12 @@ peru_bolivia_confederation.1 = { #context
 		#triggered at the start
 	}
 
-	option = { 
+    option = { 
 		default_option = yes
 		name = peru_bolivia_confederation.1.a
 		trigger = {
-			exists = c:PEU
-			c:PEU = THIS
+			exists = c:BOL
+			c:BOL = THIS
 		}	
 	}
 
@@ -52,8 +52,8 @@ peru_bolivia_confederation.1 = { #context
 		default_option = yes
 		name = peru_bolivia_confederation.1.b
 		trigger = {
-			exists = c:BOL
-			c:BOL = THIS
+			exists = c:PEU
+			c:PEU = THIS
 		}	
 	}
 }
@@ -64,14 +64,14 @@ peru_bolivia_confederation.2 = { #Fin de la Revuelta
 	title = {
 		first_valid = {
 			triggered_desc = {
-				desc = peru_bolivia_confederation.1.t
+				desc = peru_bolivia_confederation.2.t
 				trigger = {
 					exists = c:BOL
 					c:BOL = THIS
 				}
 			}
 			triggered_desc = {
-				desc = peru_bolivia_confederation.1.t2
+				desc = peru_bolivia_confederation.2.t2
 				trigger = {
 					exists = c:PEU
 					c:PEU = THIS
@@ -79,13 +79,31 @@ peru_bolivia_confederation.2 = { #Fin de la Revuelta
 			}
 		}
 	}
-	desc = peru_bolivia_confederation.1.d2
-	flavor =  peru_bolivia_confederation.1.f
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = peru_bolivia_confederation.2.d
+				trigger = {
+					exists = c:BOL
+					c:BOL = THIS
+				}
+			}
+			triggered_desc = {
+				desc = peru_bolivia_confederation.2.d2
+				trigger = {
+					exists = c:PEU
+					c:PEU = THIS
+				}
+			}
+		}
+	}
+	
+	flavor =  peru_bolivia_confederation.2.f
 
 	duration = 1
 
 	event_image = {
-		video = "gfx/event_pictures/military_parade.bk2"
+		video = "gfx/event_pictures/unspecific_military_parade.bk2"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -93,26 +111,35 @@ peru_bolivia_confederation.2 = { #Fin de la Revuelta
 
 	icon = "gfx/interface/icons/event_icons/event_default.dds"
 
-	immediate = {
-		set_global_variable = { name = coup_ended2 }
-	}
-
 	trigger = {
 		c:PEU = {
 			is_at_war = no
 		}
-		c:PEU = this
-		NOT = { has_global_variable = coup_ended2  }
+		NOT = { has_global_variable = coup_ended }
+	}
+	
+	option = { 
+		default_option = yes
+		name = peru_bolivia_confederation.2.b
+		trigger = {
+			exists = c:PEU
+			c:PEU = THIS
+		}
 	}
 
-	option = { # situacion del sur - queda en manos de bolivia
+	option = { 
 		default_option = yes
-		name = peru_bolivia_confederation.1.a
+		name = peru_bolivia_confederation.2.a
+		trigger = {
+			exists = c:BOL
+			c:BOL = THIS
+		}
 		c:BOL = {
 			trigger_event = {
-				id = peru_bolivia_confederation.2
+				id = peru_bolivia_confederation.3
 				days = 30
 			}
+			set_global_variable = { name = coup_ended }
 		}
 	}
 }
@@ -120,9 +147,9 @@ peru_bolivia_confederation.2 = { #Fin de la Revuelta
 peru_bolivia_confederation.3 = { #El destino del Perú
 	type = country_event
 	placement = ROOT
-	title = peru_bolivia_confederation.2.t
-	desc = peru_bolivia_confederation.2.d
-	flavor =  peru_bolivia_confederation.2.f
+	title = peru_bolivia_confederation.3.t
+	desc = peru_bolivia_confederation.3.d
+	flavor =  peru_bolivia_confederation.3.f
 
 	duration = 3
 
@@ -143,10 +170,6 @@ peru_bolivia_confederation.3 = { #El destino del Perú
 		set_variable = {
 			name = peru_bolivia_var
 			value = 0
-		}
-		trigger_event = {
-			id = peru_bolivia_confederation.4
-			months = 7
 		}
 	}
 
@@ -240,6 +263,10 @@ peru_bolivia_confederation.3 = { #El destino del Perú
 		ai_chance = {
 			base = 5
 		}
+		trigger_event = {
+			id = peru_bolivia_confederation.5
+			months = 7
+		}
 	}
 }
 
@@ -249,14 +276,14 @@ peru_bolivia_confederation.4 = { #Viva Peru del Sur
 	title = {
 		first_valid = {
 			triggered_desc = {
-				desc = peru_bolivia_confederation.3.t
+				desc = peru_bolivia_confederation.4.t
 				trigger = {
 					exists = c:BOL
 					c:BOL = THIS
 				}
 			}
 			triggered_desc = {
-				desc = peru_bolivia_confederation.3.t2
+				desc = peru_bolivia_confederation.4.t2
 				trigger = {
 					exists = c:ESP
 					c:PEU = THIS
@@ -290,6 +317,10 @@ peru_bolivia_confederation.4 = { #Viva Peru del Sur
 		trigger = {
 			exists = c:BOL
 			c:BOL = THIS
+		}
+		trigger_event = {
+			id = peru_bolivia_confederation.4
+			months = 7
 		}
 		c:ESP = {
 			set_next_election_date = "1837.9.17"
