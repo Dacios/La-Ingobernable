@@ -175,7 +175,7 @@ peru_bolivia_confederation.3 = { #El destino del Perú
 	}
 
 	option = { #Dividir Perú
-		name = peru_bolivia_confederation.2.a
+		name = peru_bolivia_confederation.3.a
 		default_option = yes
 		create_country = {
             tag = ESP
@@ -256,7 +256,7 @@ peru_bolivia_confederation.3 = { #El destino del Perú
 	}
 
 	option = { # Peru Unido
-		name = peru_bolivia_confederation.2.b
+		name = peru_bolivia_confederation.3.b
 		change_relations = {
 			country = c:PEU
 			value = -15
@@ -293,9 +293,9 @@ peru_bolivia_confederation.4 = { #Viva Peru del Sur
 		}
 	}
 
-	desc = peru_bolivia_confederation.3.d
+	desc = peru_bolivia_confederation.4.d
 
-	flavor =  peru_bolivia_confederation.3.f
+	flavor =  peru_bolivia_confederation.4.f
 
 	duration = 1
 
@@ -314,13 +314,13 @@ peru_bolivia_confederation.4 = { #Viva Peru del Sur
 
 	option = { #viva la independecia! - BOL
 		default_option = yes
-		name = peru_bolivia_confederation.3.a
+		name = peru_bolivia_confederation.4.a
 		trigger = {
 			exists = c:BOL
 			c:BOL = THIS
 		}
 		trigger_event = {
-			id = peru_bolivia_confederation.4
+			id = peru_bolivia_confederation.5
 			months = 7
 		}
 		c:ESP = {
@@ -389,11 +389,29 @@ peru_bolivia_confederation.4 = { #Viva Peru del Sur
 					experienced_offensive_planner 
 				}
 			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_ICA
+				}
+				set_state_type = incorporated
+		    }
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_LIMA
+				}
+				set_state_type = incorporated
+		    }
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_TARAPACA
+				}
+				set_state_type = incorporated
+		    }
 		}
 	}	
 	option = { #viva la independecia! - PEU
 		default_option = yes
-		name = peru_bolivia_confederation.3.b
+		name = peru_bolivia_confederation.4.b
 		trigger = {
 			exists = c:PEU
 			c:PEU = THIS
@@ -404,9 +422,9 @@ peru_bolivia_confederation.4 = { #Viva Peru del Sur
 peru_bolivia_confederation.5 = { #Formalizacion - infamia
 	type = country_event
 	placement = ROOT
-	title = peru_bolivia_confederation.4.t
-	desc = peru_bolivia_confederation.4.d
-	flavor =  peru_bolivia_confederation.4.f
+	title = peru_bolivia_confederation.5.t
+	desc = peru_bolivia_confederation.5.d
+	flavor =  peru_bolivia_confederation.5.f
 
 	duration = 1
 
