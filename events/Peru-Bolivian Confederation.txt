@@ -24,7 +24,7 @@ peru_bolivia_confederation.1 = { #Historical Context
 	desc = peru_bolivia_confederation.1.d
 	flavor =  peru_bolivia_confederation.1.f
 
-	duration = 1
+	duration = 2
 
 	event_image = {
 		video = "gfx/event_pictures/southamerica_war_civilians.bk2"
@@ -152,7 +152,7 @@ peru_bolivia_confederation.3 = { #El destino del Perú
 	desc = peru_bolivia_confederation.3.d
 	flavor =  peru_bolivia_confederation.3.f
 
-	duration = 3
+	duration = 1
 
 	event_image = {
 		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
@@ -297,7 +297,7 @@ peru_bolivia_confederation.4 = { #Viva Peru del Sur
 
 	flavor =  peru_bolivia_confederation.3.f
 
-	duration = 3
+	duration = 1
 
 	event_image = {
 		video = "gfx/event_pictures/unspecific_politicians_arguing.bk2"
@@ -408,7 +408,7 @@ peru_bolivia_confederation.5 = { #Formalizacion - infamia
 	desc = peru_bolivia_confederation.4.d
 	flavor =  peru_bolivia_confederation.4.f
 
-	duration = 3
+	duration = 1
 
 	event_image = {
 		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
@@ -460,7 +460,7 @@ peru_bolivia_confederation.6 = { #Test elecciones
 	desc = peru_bolivia_confederation.5.d
 	flavor =  peru_bolivia_confederation.5.f
 
-	duration = 3
+	duration = 1
 
 	event_image = {
 		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
