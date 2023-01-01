@@ -218,7 +218,7 @@ peru_bolivia_confederation.3 = { #El destino del Perú
         }
 		change_relations = {
 			country = c:PEU
-			value = -40
+			value = -50
 		}
 		trigger_event = {
 			id = peru_bolivia_confederation.4

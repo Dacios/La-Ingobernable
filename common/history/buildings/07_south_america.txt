@@ -415,6 +415,12 @@
 				reserves=1
 				activate_production_methods={ "pm_line_infantry" "pm_cannon_artillery" "pm_cavalry_scouts" "pm_no_specialists" "pm_wound_dressing" }
 			}
+			create_building={
+				building="building_university"
+				level=1
+				reserves=1
+				activate_production_methods={ "pm_secular_academia }
+			}
 		}
 	}
 	s:STATE_POTOSI={
@@ -540,6 +546,12 @@
 				level=1
 				reserves=1
 				activate_production_methods={ "pm_basic_port" }
+			}
+			create_building={
+				building="building_university"
+				level=2
+				reserves=1
+				activate_production_methods={ "pm_secular_academia }
 			}
 		}
 	}
