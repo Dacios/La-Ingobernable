@@ -138,7 +138,7 @@ peru_bolivia_confederation.2 = { #Fin de la Revuelta
 		c:BOL = {
 			trigger_event = {
 				id = peru_bolivia_confederation.3
-				days = 30
+				days = 10
 			}
 			set_global_variable = { name = coup_ended }
 		}
@@ -252,6 +252,23 @@ peru_bolivia_confederation.3 = { #El destino del Perú
 				 basic_diplomat
 				}
 		    }
+			create_character = {
+				first_name = blas
+				last_name = cardena
+				ig_leader = no 
+				interest_group = ig_armed_forces
+				is_general = yes
+				birth_date = 1792.2.2
+				female = no 
+				culture = cu:south_andean 
+				dna = dna_blas_cardeñas
+				ideology = ideology_moderate
+				religion = rel:catholic
+				traits = {
+					reserved
+					experienced_offensive_planner 
+				}
+			}
 		}
 	}
 
@@ -372,23 +389,7 @@ peru_bolivia_confederation.4 = { #Viva Peru del Sur
 				 basic_diplomat
 				}
 			}
-			create_character = {
-				first_name = blas
-				last_name = cardena
-				ig_leader = no 
-				interest_group = ig_armed_forces
-				is_general = yes
-				birth_date = 1792.2.2
-				female = no 
-				culture = cu:south_andean 
-				dna = dna_blas_cardeñas
-				ideology = ideology_moderate
-				religion = rel:catholic
-				traits = {
-					reserved
-					experienced_offensive_planner 
-				}
-			}
+			
 			random_scope_state = {
 				limit = {
 					state_region = s:STATE_ICA
@@ -441,21 +442,9 @@ peru_bolivia_confederation.5 = { #Formalizacion - infamia
 
 	}
 	
-	immediate = {
-		set_variable = {
-			name = peru_bolivia_var
-			value = 0
-		}
-		add_journal_entry = {
-			type = je_peru_bolivia_li
-		}
-		add_journal_entry = {
-			type = je_dictatorship_powers
-		}
-    }
 	option = {
 		default_option = yes
-		name = peru_bolivia_confederation.4.a
+		name = peru_bolivia_confederation.5.a
 		create_incident = {
 			value = 15
 			country = c:PEU
@@ -468,10 +457,55 @@ peru_bolivia_confederation.5 = { #Formalizacion - infamia
 			country = c:CHL
 			value = -50
 		}
+		trigger_event = {
+			id = peru_bolivia_confederation.6
+			months = 6
+		}
 	}
 }
 
-peru_bolivia_confederation.6 = { #Test elecciones
+peru_bolivia_confederation.6 = { #Poderes Dictatriales
+	type = country_event
+	placement = ROOT
+	title = peru_bolivia_confederation.6.t
+	desc = peru_bolivia_confederation.6.d
+	flavor =  peru_bolivia_confederation.6.f
+
+	duration = 1
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+
+	}
+
+	immediate = {
+		set_variable = {
+			name = peru_bolivia_var
+			value = 0
+		}
+		add_journal_entry = {
+			type = je_peru_bolivia_li
+		}
+		add_journal_entry = {
+			type = je_dictatorship_powers
+		}
+    }
+
+	option = { 
+	 default_option = yes
+	 name = peru_bolivia_confederation.6.a
+	}
+}
+
+peru_bolivia_confederation.7 = { #Test elecciones
 	type = country_event
 	placement = ROOT
 	title = peru_bolivia_confederation.5.t

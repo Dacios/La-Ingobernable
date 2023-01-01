@@ -2,6 +2,6 @@ DIPLOMACY = {
 	c:ARG = {
 		set_relations = { country = c:SPA value = -30 }
 		set_relations = { country = c:BRZ value = -30 }
-        set_relations = { country = c:BOL value = -20 }
+        set_relations = { country = c:BOL value = -50 }
 	}
 }    
