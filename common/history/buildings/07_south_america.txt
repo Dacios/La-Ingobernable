@@ -419,7 +419,7 @@
 				building="building_university"
 				level=1
 				reserves=1
-				activate_production_methods={ "pm_secular_academia }
+				activate_production_methods={ "pm_religious_academia" }
 			}
 		}
 	}
@@ -551,7 +551,7 @@
 				building="building_university"
 				level=2
 				reserves=1
-				activate_production_methods={ "pm_secular_academia }
+				activate_production_methods={ "pm_religious_academia" }
 			}
 		}
 	}
