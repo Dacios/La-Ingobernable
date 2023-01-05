@@ -216,23 +216,6 @@ peru_bolivia_confederation.3 = { #El destino del Perú
             country = c:ESP
             type = puppet
         }
-		change_relations = {
-			country = c:PEU
-			value = -50
-		}
-		trigger_event = {
-			id = peru_bolivia_confederation.4
-			days = 6
-		}
-		c:PEU = {
-			trigger_event = {
-				id = peru_bolivia_confederation.4
-				days = 6
-			}
-		}
-		ai_chance = {
-			base = 100
-		}
 		c:ESP = {
 			set_relations = { country = c:BOL value = 80 }
 			create_character = {
@@ -270,19 +253,32 @@ peru_bolivia_confederation.3 = { #El destino del Perú
 				}
 			}
 		}
+		change_relations = {
+			country = c:PEU
+			value = -100
+		}
+		trigger_event = {
+			id = peru_bolivia_confederation.4
+			days = 6
+		}
+		c:PEU = {
+			trigger_event = {
+				id = peru_bolivia_confederation.4
+				days = 6
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
 	}
 
 	option = { # Peru Unido
 		name = peru_bolivia_confederation.3.b
-		change_relations = {
-			country = c:PEU
-			value = -15
-		}
 		ai_chance = {
 			base = 5
 		}
 		trigger_event = {
-			id = peru_bolivia_confederation.5
+			id = peru_bolivia_confederation.6
 			months = 7
 		}
 	}
@@ -420,7 +416,7 @@ peru_bolivia_confederation.4 = { #Viva Peru del Sur
 	}
 }
 
-peru_bolivia_confederation.5 = { #Formalizacion - infamia
+peru_bolivia_confederation.5 = { #Formalizacion
 	type = country_event
 	placement = ROOT
 	title = peru_bolivia_confederation.5.t
@@ -450,6 +446,10 @@ peru_bolivia_confederation.5 = { #Formalizacion - infamia
 			country = c:PEU
 		}
 		change_relations = {
+			country = c:PEU
+			value = -20
+		}
+		change_relations = {
 			country = c:ARG
 			value = -50
 		}
@@ -464,7 +464,55 @@ peru_bolivia_confederation.5 = { #Formalizacion - infamia
 	}
 }
 
-peru_bolivia_confederation.6 = { #Poderes Dictatriales
+peru_bolivia_confederation.6 = { #Formalizacion - Peru Unido
+	type = country_event
+	placement = ROOT
+	title = peru_bolivia_confederation.5.t
+	desc = peru_bolivia_confederation.6.d
+	flavor =  peru_bolivia_confederation.6.f
+
+	duration = 1
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+
+	}
+	
+	option = {
+		default_option = yes
+		name = peru_bolivia_confederation.5.a
+		create_incident = {
+			value = 15
+			country = c:PEU
+		}
+		change_relations = {
+			country = c:PEU
+			value = -20
+		}
+		change_relations = {
+			country = c:ARG
+			value = -50
+		}
+		change_relations = {
+			country = c:CHL
+			value = -80
+		}
+		trigger_event = {
+			id = peru_bolivia_confederation.6
+			months = 6
+		}
+	}
+}
+
+peru_bolivia_confederation.7 = { Poderes Dictatoriales 
 	type = country_event
 	placement = ROOT
 	title = peru_bolivia_confederation.6.t
@@ -505,7 +553,7 @@ peru_bolivia_confederation.6 = { #Poderes Dictatriales
 	}
 }
 
-peru_bolivia_confederation.7 = { #Test elecciones
+peru_bolivia_confederation.8 = { #Test elecciones
 	type = country_event
 	placement = ROOT
 	title = peru_bolivia_confederation.5.t
