@@ -18,5 +18,20 @@
 				basic_offensive_planner
 			}
 		}
+		create_character = {
+			first_name = "Jose"
+			last_name = "Ballivian"
+			ig_leader = no
+			ruler = no
+			is_general = yes
+			birth_date = 1805.4.5
+			dna = dna_jose_ballivian
+			interest_group = ig_armed_forces
+			ideology = ideology_moderate
+			traits = {
+				persistent
+				traditionalist_commander
+			}
+		}
 	}
 }
