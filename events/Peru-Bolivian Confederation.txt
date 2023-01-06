@@ -512,12 +512,12 @@ peru_bolivia_confederation.6 = { #Formalizacion - Peru Unido
 	}
 }
 
-peru_bolivia_confederation.7 = { Poderes Dictatoriales 
+peru_bolivia_confederation.7 = { #Pacto de Tacna 
 	type = country_event
 	placement = ROOT
-	title = peru_bolivia_confederation.6.t
-	desc = peru_bolivia_confederation.6.d
-	flavor =  peru_bolivia_confederation.6.f
+	title = peru_bolivia_confederation.7.t
+	desc = peru_bolivia_confederation.7.d
+	flavor =  peru_bolivia_confederation.7.f
 
 	duration = 1
 
@@ -548,8 +548,11 @@ peru_bolivia_confederation.7 = { Poderes Dictatoriales
     }
 
 	option = { 
-	 default_option = yes
-	 name = peru_bolivia_confederation.6.a
+	    default_option = yes
+	    name = peru_bolivia_confederation.7.a
+		call_election = {
+		  months = 120
+		}
 	}
 }
 
