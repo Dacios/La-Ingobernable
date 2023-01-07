@@ -16,7 +16,7 @@
 
 	on_complete = {
 		trigger_event = {
-			id = south_america.1
+			id = peru_bolivia_confederation.8
 		}
 	}
 

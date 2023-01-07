@@ -556,7 +556,72 @@ peru_bolivia_confederation.7 = { #Pacto de Tacna
 	}
 }
 
-peru_bolivia_confederation.8 = { #Test elecciones
+peru_bolivia_confederation.8 = { #Consolidacion
+	type = country_event
+	placement = ROOT
+	title = peru_bolivia_confederation.8.t
+	desc = peru_bolivia_confederation.8.d
+	flavor =  peru_bolivia_confederation.8.f
+
+	duration = 1
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_default.dds"
+
+	trigger = {
+		# triggered by JE
+	}
+
+	option = { 
+	    default_option = yes
+	    name = peru_bolivia_confederation.8.a
+		c:BOL = {
+          annex = c:PEU
+        }
+
+        c:BOL = {
+            annex = c:ESP
+		    random_scope_state = {
+				limit = {
+					state_region = s:STATE_CAJAMARCA
+				}
+				set_state_type = incorporated
+		    }
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_LIMA
+				}
+				set_state_type = incorporated
+		    }
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_ICA
+				}
+				set_state_type = incorporated
+		    }
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_AREQUIPA
+				}
+				set_state_type = incorporated
+		    }
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_TARAPACA
+				}
+				set_state_type = incorporated
+		    }
+        }
+	}
+}
+
+peru_bolivia_confederation.9 = { #Test elecciones
 	type = country_event
 	placement = ROOT
 	title = peru_bolivia_confederation.5.t
