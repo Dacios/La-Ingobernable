@@ -617,6 +617,12 @@ peru_bolivia_confederation.8 = { #Consolidacion
 				}
 				set_state_type = incorporated
 		    }
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_CAJAMARCA
+				}
+				set_state_type = incorporated
+		    }
         }
 	}
 }
