@@ -236,3 +236,12 @@ ESP = {
 		instance = { scale = { 0.3 0.4 } position = { 0.16 0.5 } }
 	}
 }
+BOL_perubolivia_dictatorship = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	textured_emblem = {
+		texture = "te_BOL_perubolivia_dictatorship_charge.png"
+		instance = { scale = { 0.35 0.45 } position = { 0.5 0.5 } }
+	}
+}

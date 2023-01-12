@@ -1,0 +1,14 @@
+﻿coa_peru_bolivia_trigger = {		
+	owns_entire_state_region = STATE_LA_PAZ
+	owns_entire_state_region = STATE_LIMA	
+}
+
+coa_peru_bolivia_dictatorship_trigger = {		
+	coa_peru_bolivia_trigger = yes
+}
+
+coa_def_peru_bolivia_dictatorship_flag_trigger  = {
+	exists = scope:actor
+	scope:actor = { coa_peru_bolivia_dictatorship_trigger = yes}
+}
+

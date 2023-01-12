@@ -110,4 +110,12 @@ BOL = { # Bolivia
 			coa_def_spanish_ensign_trigger = yes
 		}
 	}		
+	flag_definition = {
+		coa = BOL_perubolivia_dictatorship
+		subject_canton = BOL_perubolivia_dictatorship
+		priority = 550
+		trigger = {
+			coa_def_peru_bolivia_dictatorship_flag_trigger = yes
+		}
+	}
 }
