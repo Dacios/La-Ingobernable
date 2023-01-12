@@ -57,6 +57,7 @@
 		}
 	}	
 }
+
 ESP = { #Estado Sud-Peruano/South Peruvian state
     flag_definition = {
 		coa = ESP
@@ -66,6 +67,7 @@ ESP = { #Estado Sud-Peruano/South Peruvian state
 		priority = 1 
 	}
 }
+
 BOL = { # Bolivia
 	flag_definition = {
 		coa = BOL_dictatorship
