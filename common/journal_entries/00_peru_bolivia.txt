@@ -1,4 +1,4 @@
-﻿je_peru_bolivia_li = { #Formalizacion de la Confederacion
+﻿je_peru_bolivia_lai = { #Formalizacion de la Confederacion
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	on_monthly_pulse = {
