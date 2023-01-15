@@ -24,10 +24,17 @@
 			add_ruling_interest_group = yes
 		}
 
+		ig:ig_intelligentsia = {
+			remove_ideology = ideology_liberal
+			add_ideology = ideology_liberalismo
+			add_ideology = ideology_soberania_aristocratica
+		}
+
 		ig:ig_landowners = {
 			remove_ideology = ideology_paternalistic
-			add_ideology = ideology_caudillismo
-			add_ruling_interest_group = yes
+			remove_ideology = ideology_stratocratic
+			add_ideology = ideology_conservadurismo
+			add_ideology = ideology_soberania_aristocratica
 		}
 
 		ig:ig_devout = {
