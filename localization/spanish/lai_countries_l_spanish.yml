@@ -1,0 +1,12 @@
+﻿l_spanish:
+ PEU:0 "Perú"
+ PEU_ADJ:0 "Peruano"
+ PES:0 "Golpe Militar de Salaverry"
+ PES_ADJ:0 "de Salaverry"
+ ESP:0 "Estado Sud-Peruano"
+ ESP_ADJ:0 "Sud-Peruano"
+ dyn_c_nor_peruvian_state:0 "Estado Nor-Peruano"
+ dyn_c_nor_peruvian_state_adj:0 "Nor-Peruano"
+ dyn_c_bol_state:0 "Estado Boliviano"
+ dyn_c_bol_state_adj:0 "de la Confederación"
+ dyn_c_confederacion_peru_boliviana:0 "Confederación Perú-Boliviana"
