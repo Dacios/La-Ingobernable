@@ -652,7 +652,7 @@ peru_bolivia_confederation.9 = { #Elecciones
 
 	duration = 1
 
-	inmediate = {
+	immediate = {
 		call_election = {
 		  months = 120
 		}
