@@ -549,6 +549,10 @@ peru_bolivia_confederation.7 = { #Pacto de Tacna
 		add_journal_entry = {
 			type = je_peru_bolivia_lai
 		}
+		trigger_event = {
+			id = peru_bolivia_confederation.9
+			days = 3655
+		}
     }
 
 	option = { 
@@ -637,34 +641,25 @@ peru_bolivia_confederation.8 = { #Consolidacion
 	}
 }
 
-peru_bolivia_confederation.9 = { #Test elecciones
+peru_bolivia_confederation.9 = { #Elecciones
 	type = country_event
-	placement = ROOT
-	title = peru_bolivia_confederation.5.t
-	desc = peru_bolivia_confederation.5.d
-	flavor =  peru_bolivia_confederation.5.f
+	hidden = yes
+
+	trigger = {
+		c:BOL = THIS
+		NOT = { has_global_variable = no_ten_year }
+	}
 
 	duration = 1
 
-	event_image = {
-		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
-
-	icon = "gfx/interface/icons/event_icons/event_default.dds"
-
-	trigger = {
-
-	}
-
-	option = { #census voting
-		default_option = yes
-		name = peru_bolivia_confederation.2.a
-		activate_law = law_type:law_census_voting
+	inmediate = {
 		call_election = {
-			months = 1
+		  months = 120
+		}
+		
+		trigger_event = {
+			id = peru_bolivia_confederation.9
+			days = 3655
 		}
 	}
 }
