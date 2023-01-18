@@ -636,6 +636,7 @@ BOL = {
 		}
 	}
 }
+}
 
 BRE = { # Bremen
 	dynamic_country_name = {
